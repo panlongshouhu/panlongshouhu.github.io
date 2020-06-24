@@ -305,6 +305,26 @@
 </div>
 
   
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "973827534b977f148836",
+          clientSecret: "75caeeb89ba3f2f9821b90560e451d00712c4a76",
+          repo: "shiqiang",
+          owner: "panlongshouhu",
+          admin: ["panlongshouhu"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "安卓加载旋转效果",
+          language: "zh-CN",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
 </article>
 
 <div class="pagination">
