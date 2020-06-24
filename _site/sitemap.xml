@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/shiqiang/android-rotate/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/android-rotate/</loc>
 <lastmod>2020-06-24T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/shiqiang/404/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/404/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/shiqiang/about/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/shiqiang/archive/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/archive/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/shiqiang/tags/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/tags/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/shiqiang/</loc>
+<loc>http://localhost:4000/panlongshouhu.github.io/</loc>
 </url>
 </urlset>

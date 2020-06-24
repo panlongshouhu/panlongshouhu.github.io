@@ -16,7 +16,7 @@ url:
 # 添加你的博客的二级域名，一般来说是你的repository名
 # 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
 # 那么就写成 "/repository-name"
-baseurl: /shiqiang
+baseurl: /panlongshouhu.github.io
 
 
 #
@@ -55,7 +55,7 @@ footer-links:
   email: 15501298119@163.com 
   facebook: #https://www.facebook.com/<>
   flickr: #https://www.flickr.com/<>
-  github: panlongshouhu/shiqiang #https://github.com/<>
+  github: panlongshouhu/panlongshouhu.github.io #https://github.com/<>
   instagram: #https://instagram.com/<>
   linkedin: #https://www.linkedin.com/in/<>
   pinterest: #https://www.pinterest.com/<>
@@ -79,7 +79,7 @@ disqus: loffer #shortname
 gitalk:
   clientID: 973827534b977f148836
   clientSecret: 75caeeb89ba3f2f9821b90560e451d00712c4a76
-  repo: shiqiang
+  repo: panlongshouhu.github.io
   owner: panlongshouhu
 
 # 输入Google Analytics web tracking code
@@ -94,7 +94,7 @@ permalink: /:title/
 paginate_path: /page:num/
 
 # The release of Jekyll Now that you're using
-version: v1.1.1
+version: v1.0.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
