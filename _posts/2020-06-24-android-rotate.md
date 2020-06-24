@@ -29,5 +29,4 @@ android:indeterminateDuration="100"
 android:layout_centerInParent="true"  
 android:indeterminateDrawable="@drawable/progress"  
 android:indeterminateOnly="true" />  
-
 其中android:pivotX="50%" 和android:pivotY="50%" 图片为中心旋转，ab为旋转的图片。
