@@ -10,70 +10,46 @@
 
     
     <meta name="description" content="列表下拉，页面等待加载都可以使用。
+在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:
 
-   在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下：
+&lt;?xml version=”1.0” encoding=”utf-8”?&gt;
+&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”
+android:drawable=”@drawable/ab”
+android:pivotX=”50%” 
+android:pivotY=”50%” /&gt;
 
+在layout布局文件里写入:
 
-
-&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”   
- 
-    android:drawable=”@drawable/ab”    
-
-    android:pivotX=”50%”    
-
-    android:pivotY=”50%” /&gt;
-
-在layout布局文件里写入：
-
-    &lt;ProgressBar
-
-        android:layout_width=”wrap_content”
-
-        android:layout_height=”wrap_content”
-
-        android:indeterminateBehavior=”repeat”
-
-        android:indeterminateDuration=”100”
-
-        android:layout_centerInParent=”true”
-
-        android:indeterminateDrawable=”@drawable/progress”
-
-        android:indeterminateOnly=”true” /&gt;
+&lt;ProgressBar
+android:layout_width=”wrap_content”
+android:layout_height=”wrap_content”
+android:indeterminateBehavior=”repeat”
+android:indeterminateDuration=”100”
+android:layout_centerInParent=”true”
+android:indeterminateDrawable=”@drawable/progress”
+android:indeterminateOnly=”true” /&gt;
 
 其中android:pivotX=”50%” 和android:pivotY=”50%” 图片为中心旋转，ab为旋转的图片。
 " />
     <meta property="og:description" content="列表下拉，页面等待加载都可以使用。
+在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:
 
-   在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下：
+&lt;?xml version=”1.0” encoding=”utf-8”?&gt;
+&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”
+android:drawable=”@drawable/ab”
+android:pivotX=”50%” 
+android:pivotY=”50%” /&gt;
 
+在layout布局文件里写入:
 
-
-&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”   
- 
-    android:drawable=”@drawable/ab”    
-
-    android:pivotX=”50%”    
-
-    android:pivotY=”50%” /&gt;
-
-在layout布局文件里写入：
-
-    &lt;ProgressBar
-
-        android:layout_width=”wrap_content”
-
-        android:layout_height=”wrap_content”
-
-        android:indeterminateBehavior=”repeat”
-
-        android:indeterminateDuration=”100”
-
-        android:layout_centerInParent=”true”
-
-        android:indeterminateDrawable=”@drawable/progress”
-
-        android:indeterminateOnly=”true” /&gt;
+&lt;ProgressBar
+android:layout_width=”wrap_content”
+android:layout_height=”wrap_content”
+android:indeterminateBehavior=”repeat”
+android:indeterminateDuration=”100”
+android:layout_centerInParent=”true”
+android:indeterminateDrawable=”@drawable/progress”
+android:indeterminateOnly=”true” /&gt;
 
 其中android:pivotX=”50%” 和android:pivotY=”50%” 图片为中心旋转，ab为旋转的图片。
 " />
@@ -251,37 +227,25 @@
   </div>
 
   <div class="entry">
-    <p>列表下拉，页面等待加载都可以使用。</p>
+    <p>列表下拉，页面等待加载都可以使用。<br />
+在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:</p>
 
-<p>   在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下：</p>
+<p>&lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br />
+&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”<br />
+android:drawable=”@drawable/ab”<br />
+android:pivotX=”50%” <br />
+android:pivotY=”50%” /&gt;</p>
 
-<?xml version="1.0" encoding="utf-8"?>
+<p>在layout布局文件里写入:</p>
 
-<p>&lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”   
- 
-    android:drawable=”@drawable/ab”    </p>
-
-<p>    android:pivotX=”50%”    </p>
-
-<p>    android:pivotY=”50%” /&gt;</p>
-
-<p>在layout布局文件里写入：</p>
-
-<p>    &lt;ProgressBar</p>
-
-<p>        android:layout_width=”wrap_content”</p>
-
-<p>        android:layout_height=”wrap_content”</p>
-
-<p>        android:indeterminateBehavior=”repeat”</p>
-
-<p>        android:indeterminateDuration=”100”</p>
-
-<p>        android:layout_centerInParent=”true”</p>
-
-<p>        android:indeterminateDrawable=”@drawable/progress”</p>
-
-<p>        android:indeterminateOnly=”true” /&gt;</p>
+<p>&lt;ProgressBar<br />
+android:layout_width=”wrap_content”<br />
+android:layout_height=”wrap_content”<br />
+android:indeterminateBehavior=”repeat”<br />
+android:indeterminateDuration=”100”<br />
+android:layout_centerInParent=”true”<br />
+android:indeterminateDrawable=”@drawable/progress”<br />
+android:indeterminateOnly=”true” /&gt;</p>
 
 <p>其中android:pivotX=”50%” 和android:pivotY=”50%” 图片为中心旋转，ab为旋转的图片。</p>
 

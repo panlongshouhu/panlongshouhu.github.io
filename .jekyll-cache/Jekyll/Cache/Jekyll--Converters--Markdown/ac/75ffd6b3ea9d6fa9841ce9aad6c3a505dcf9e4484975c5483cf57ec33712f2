@@ -1,0 +1,16 @@
+I"<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>列表下拉，页面等待加载都可以使用。  
+在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:  
+&lt;?xml version="1.0" encoding="utf-8"?&gt;  
+&lt;animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"       android:drawable="@drawable/ab"       android:pivotX="50%"        android:pivotY="50%" /&gt;    
+在layout布局文件里写入:  
+&lt;ProgressBar  
+android:layout_width="wrap_content"  
+android:layout_height="wrap_content"  
+android:indeterminateBehavior="repeat"  
+android:indeterminateDuration="100"  
+android:layout_centerInParent="true"  
+android:indeterminateDrawable="@drawable/progress"  
+android:indeterminateOnly="true" /&gt;  
+其中android:pivotX="50%" 和android:pivotY="50%" 图片为中心旋转，ab为旋转的图片。 &lt;img src="http://static.runoob.com/images/runoob-logo.png" width="50%"&gt;你好&lt;/img&gt;
+</code></pre></div></div>
+:ET
