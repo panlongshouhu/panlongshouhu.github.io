@@ -337,7 +337,7 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 .wrapper-sidebar {
-  width: 30%;
+  width: 20%;
   -webkit-background-size: cover;
   background-size: cover;
   background-color: #f8f9fa;
@@ -372,7 +372,7 @@ img {
 
 .site-info {
   text-align: center;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -386,8 +386,8 @@ img {
 .site-info .site-avatar {
   margin: 0 auto;
   display: block;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -428,12 +428,19 @@ img {
   text-align: center;
 }
 
+.navlist-ul-li {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  list-style-type: none;
+}
+
 nav {
   display: block;
   margin-top: 23px;
   font-family: "Noto Serif", "PT Serif", source-han-serif-sc, "Source Han Serif SC", "Source Han Serif CN", "Source Han Serif TC", "Source Han Serif TW", "Source Han Serif", "Songti SC", SimSon, serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1200px) {

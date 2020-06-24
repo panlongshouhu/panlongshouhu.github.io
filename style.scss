@@ -320,7 +320,7 @@ img {
 //
 
 .wrapper-sidebar {
-  width: 30%;
+  width: 20%;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-color: $background-color;
@@ -351,7 +351,7 @@ img {
 
 .site-info {
   text-align:center;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
 
   @include mobile {
     float: none;
@@ -362,8 +362,8 @@ img {
   .site-avatar {
     margin:0 auto;
     display: block;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 100px;
+    max-height: 100px;
 
     @include mobile {
       max-width: 120px;
@@ -398,15 +398,22 @@ img {
 }
 
 .navlist{
-  text-align:center;
+  text-align: center;
 }
+
+.navlist-ul-li{ 
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  list-style-type: none;
+} 
 
 nav {
   display: block;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $base-font;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
 
   @include mobile {
     margin-top: 9px;

@@ -1,215 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/shiqiang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shiqiang/" rel="alternate" type="text/html" /><updated>2020-06-23T18:35:40+08:00</updated><id>http://localhost:4000/shiqiang/feed.xml</id><title type="html">Blog</title><subtitle>石强的博客</subtitle><entry><title type="html">Markdown语法简介</title><link href="http://localhost:4000/shiqiang/chinese-markdown-cheatsheet/" rel="alternate" type="text/html" title="Markdown语法简介" /><published>2013-07-16T00:00:00+08:00</published><updated>2013-07-16T00:00:00+08:00</updated><id>http://localhost:4000/shiqiang/chinese-markdown-cheatsheet</id><content type="html" xml:base="http://localhost:4000/shiqiang/chinese-markdown-cheatsheet/">&lt;p&gt;本中文版Markdown语法简介来自博客 &lt;a href=&quot;https://blog.shengbin.me/posts/markdown-syntax&quot;&gt;https://blog.shengbin.me/posts/markdown-syntax&lt;/a&gt;，并由我完成了汉化。其中的站位文字来自&lt;a href=&quot;https://suulnnka.github.io/BullshitGenerator/index.html&quot;&gt;狗屁不通文章生成器&lt;/a&gt;。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/shiqiang/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shiqiang/" rel="alternate" type="text/html" /><updated>2020-06-24T14:08:32+08:00</updated><id>http://localhost:4000/shiqiang/feed.xml</id><title type="html">Blog</title><subtitle>石强的博客</subtitle><entry><title type="html">安卓加载旋转效果</title><link href="http://localhost:4000/shiqiang/android-rotate/" rel="alternate" type="text/html" title="安卓加载旋转效果" /><published>2020-06-24T00:00:00+08:00</published><updated>2020-06-24T00:00:00+08:00</updated><id>http://localhost:4000/shiqiang/android-rotate</id><content type="html" xml:base="http://localhost:4000/shiqiang/android-rotate/">&lt;p&gt;列表下拉，页面等待加载都可以使用。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown语法的完整文档在这里&lt;/a&gt;。下面整理的这些为了方便写博客时参考。&lt;/p&gt;
+&lt;p&gt;   在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下：&lt;/p&gt;
 
-&lt;h2 id=&quot;分段与分行&quot;&gt;分段与分行&lt;/h2&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 
-&lt;p&gt;以一个或多个空行来隔开段落；以两个或多个空格来段内换行。&lt;/p&gt;
+&lt;p&gt;&amp;lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”   
+ 
+    android:drawable=”@drawable/ab”    &lt;/p&gt;
 
-&lt;h2 id=&quot;标题&quot;&gt;标题&lt;/h2&gt;
+&lt;p&gt;    android:pivotX=”50%”    &lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这是一级标题
-=============
+&lt;p&gt;    android:pivotY=”50%” /&amp;gt;&lt;/p&gt;
 
-这是二级标题
--------------
+&lt;p&gt;在layout布局文件里写入：&lt;/p&gt;
 
-# 一级标题
+&lt;p&gt;    &amp;lt;ProgressBar&lt;/p&gt;
 
-##  二级标题
+&lt;p&gt;        android:layout_width=”wrap_content”&lt;/p&gt;
 
-######  六级标题
+&lt;p&gt;        android:layout_height=”wrap_content”&lt;/p&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;        android:indeterminateBehavior=”repeat”&lt;/p&gt;
 
-&lt;h2 id=&quot;引用&quot;&gt;引用&lt;/h2&gt;
+&lt;p&gt;        android:indeterminateDuration=”100”&lt;/p&gt;
 
-&lt;p&gt;在每一行前面写一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;        android:layout_centerInParent=”true”&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是一个引用段落。
-&amp;gt; 一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 
-&amp;gt; 一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。 
-&amp;gt;
-&amp;gt; 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： 
-&amp;gt; 现在，解决标记语言的问题，是非常非常重要的。 
+&lt;p&gt;        android:indeterminateDrawable=”@drawable/progress”&lt;/p&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;        android:indeterminateOnly=”true” /&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;这是一个引用段落。
-一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 
-一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。&lt;/p&gt;
-
-  &lt;p&gt;笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： 
-现在，解决标记语言的问题，是非常非常重要的。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;或者在每一段前面写一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是一个引用段落。一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。
-
-&amp;gt; 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： 现在，解决标记语言的问题，是非常非常重要的。 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;多重引用&quot;&gt;多重引用&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是第一层引用
-&amp;gt;
-&amp;gt; &amp;gt; 这是第二层引用
-&amp;gt;
-&amp;gt; 回到第一层
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;这是第一层引用&lt;/p&gt;
-
-  &lt;blockquote&gt;
-    &lt;p&gt;这是第二层引用&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;回到第一层&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;列表&quot;&gt;列表&lt;/h2&gt;
-
-&lt;p&gt;列表项占一行，以*、+、-开头即可：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*   甲子
-*   乙丑
-*   丙寅
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;甲子&lt;/li&gt;
-  &lt;li&gt;乙丑&lt;/li&gt;
-  &lt;li&gt;丙寅&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;有序列表只需要将上述标记符换成数字加句点。而且顺序由书写顺序决定，与数字无关，但数字需要从1开始。例如：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.  天
-3.  地
-2.  人
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;天&lt;/li&gt;
-  &lt;li&gt;地&lt;/li&gt;
-  &lt;li&gt;人&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;每一个列表项可以多行：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*  而这些并不是完全重要，更加重要的问题是，可是，即使是这样，标记语言的出现仍然代表了一定的意义。叔本华说过一句富有哲理的话，意志是一个强壮的盲人，倚靠在明眼的跛子肩上。这启发了我，要想清楚，标记语言，到底是一种怎么样的存在。
-*   伏尔泰说过一句富有哲理的话，坚持意志伟大的事业需要始终不渝的精神。这启发了我，本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。那么，标记语言因何而发生？了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。而这些并不是完全重要，更加重要的问题是，就我个人来说，标记语言对我的意义，不能不说非常重大。就我个人来说，标记语言对我的意义，不能不说非常重大。我们不得不面对一个非常尴尬的事实，那就是，总结的来说，标记语言因何而发生？
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;而这些并不是完全重要，更加重要的问题是，可是，即使是这样，标记语言的出现仍然代表了一定的意义。叔本华说过一句富有哲理的话，意志是一个强壮的盲人，倚靠在明眼的跛子肩上。这启发了我，要想清楚，标记语言，到底是一种怎么样的存在。&lt;/li&gt;
-  &lt;li&gt;伏尔泰说过一句富有哲理的话，坚持意志伟大的事业需要始终不渝的精神。这启发了我，本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。那么，标记语言因何而发生？了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。而这些并不是完全重要，更加重要的问题是，就我个人来说，标记语言对我的意义，不能不说非常重大。就我个人来说，标记语言对我的意义，不能不说非常重大。我们不得不面对一个非常尴尬的事实，那就是，总结的来说，标记语言因何而发生？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;代码块&quot;&gt;代码块&lt;/h2&gt;
-
-&lt;p&gt;每一行前面缩进四个或以上个空格，就认为是开始了一段代码块。代码块内原样输出。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这是一个普通段落
-
-    这是一个代码块
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;这是一个普通段落&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这是一个代码块
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;横线&quot;&gt;横线&lt;/h2&gt;
-
-&lt;p&gt;三个或更多个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;（它们之间可以有空格）会产生横线：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* * *
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;链接&quot;&gt;链接&lt;/h2&gt;
-
-&lt;p&gt;内嵌链接：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[链接文字](链接地址 &quot;链接描述&quot;) 
-例如 [Google](http://google.com/ &quot;Google&quot;)，[Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot;)，[MSN](http://search.msn.com/ &quot;MSN Search&quot;).
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;链接地址&quot; title=&quot;链接描述&quot;&gt;链接文字&lt;/a&gt; 
-例如 &lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt;，&lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt;，&lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;如果直接以链接地址作为链接文本，可以用如下快捷写法：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;http://www.shengbin.me&amp;gt; 效果：
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shengbin.me&quot;&gt;http://www.shengbin.me&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;强调&quot;&gt;强调&lt;/h2&gt;
-
-&lt;p&gt;单个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt;产生斜体，两个（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__&lt;/code&gt;）则产生粗体。例如：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*斜体* _斜体_
-
-**粗体** **粗体**
-
-***又粗又斜*** ___又粗又斜___
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt; &lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;粗体&lt;/strong&gt; &lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;又粗又斜&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;又粗又斜&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;内嵌代码&quot;&gt;内嵌代码&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;内嵌代码 `天地玄黄`
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;内嵌代码 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;天地玄黄&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;图片&quot;&gt;图片&lt;/h2&gt;
-
-&lt;p&gt;语法和链接相似，只是前面多个“!”&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![替代文字](图片url &quot;图片说明&quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;转义字符&quot;&gt;转义字符&lt;/h2&gt;
-
-&lt;p&gt;如果需要使用以上标记字符而不被Markdown理解为格式标记，需要用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;转义：例如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\\&lt;/code&gt;，效果为\。&lt;/p&gt;</content><author><name></name></author><category term="sample" /><category term="markdown" /><summary type="html">本中文版Markdown语法简介来自博客 https://blog.shengbin.me/posts/markdown-syntax，并由我完成了汉化。其中的站位文字来自狗屁不通文章生成器。 Markdown语法的完整文档在这里。下面整理的这些为了方便写博客时参考。 分段与分行 以一个或多个空行来隔开段落；以两个或多个空格来段内换行。 标题 这是一级标题 ============= 这是二级标题 ------------- # 一级标题 ## 二级标题 ###### 六级标题 引用 在每一行前面写一个&amp;gt;： &amp;gt; 这是一个引用段落。 &amp;gt; 一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 &amp;gt; 一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。 &amp;gt; &amp;gt; 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： &amp;gt; 现在，解决标记语言的问题，是非常非常重要的。 效果： 这是一个引用段落。 一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： 现在，解决标记语言的问题，是非常非常重要的。 或者在每一段前面写一个&amp;gt;： &amp;gt; 这是一个引用段落。一般来讲，我们都必须务必慎重的考虑考虑。 了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 莎士比亚曾经说过，抛弃时间的人，时间也抛弃他。这似乎解答了我的疑惑。 &amp;gt; 笛卡儿曾经提到过，读一切好书，就是和许多高尚的人谈话。带着这句话，我们还要更加慎重的审视这个问题： 现在，解决标记语言的问题，是非常非常重要的。 多重引用 &amp;gt; 这是第一层引用 &amp;gt; &amp;gt; &amp;gt; 这是第二层引用 &amp;gt; &amp;gt; 回到第一层 效果： 这是第一层引用 这是第二层引用 回到第一层 列表 列表项占一行，以*、+、-开头即可： * 甲子 * 乙丑 * 丙寅 效果： 甲子 乙丑 丙寅 有序列表只需要将上述标记符换成数字加句点。而且顺序由书写顺序决定，与数字无关，但数字需要从1开始。例如： 1. 天 3. 地 2. 人 效果： 天 地 人 每一个列表项可以多行： * 而这些并不是完全重要，更加重要的问题是，可是，即使是这样，标记语言的出现仍然代表了一定的意义。叔本华说过一句富有哲理的话，意志是一个强壮的盲人，倚靠在明眼的跛子肩上。这启发了我，要想清楚，标记语言，到底是一种怎么样的存在。 * 伏尔泰说过一句富有哲理的话，坚持意志伟大的事业需要始终不渝的精神。这启发了我，本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。那么，标记语言因何而发生？了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。而这些并不是完全重要，更加重要的问题是，就我个人来说，标记语言对我的意义，不能不说非常重大。就我个人来说，标记语言对我的意义，不能不说非常重大。我们不得不面对一个非常尴尬的事实，那就是，总结的来说，标记语言因何而发生？ 效果： 而这些并不是完全重要，更加重要的问题是，可是，即使是这样，标记语言的出现仍然代表了一定的意义。叔本华说过一句富有哲理的话，意志是一个强壮的盲人，倚靠在明眼的跛子肩上。这启发了我，要想清楚，标记语言，到底是一种怎么样的存在。 伏尔泰说过一句富有哲理的话，坚持意志伟大的事业需要始终不渝的精神。这启发了我，本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。那么，标记语言因何而发生？了解清楚标记语言到底是一种怎么样的存在，是解决一切问题的关键。而这些并不是完全重要，更加重要的问题是，就我个人来说，标记语言对我的意义，不能不说非常重大。就我个人来说，标记语言对我的意义，不能不说非常重大。我们不得不面对一个非常尴尬的事实，那就是，总结的来说，标记语言因何而发生？ 代码块 每一行前面缩进四个或以上个空格，就认为是开始了一段代码块。代码块内原样输出。 这是一个普通段落 这是一个代码块 效果： 这是一个普通段落 这是一个代码块 横线 三个或更多个*、-（它们之间可以有空格）会产生横线： * * * 效果： 链接 内嵌链接： [链接文字](链接地址 &quot;链接描述&quot;) 例如 [Google](http://google.com/ &quot;Google&quot;)，[Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot;)，[MSN](http://search.msn.com/ &quot;MSN Search&quot;). 效果： 链接文字 例如 Google，Yahoo，MSN. 如果直接以链接地址作为链接文本，可以用如下快捷写法： &amp;lt;http://www.shengbin.me&amp;gt; 效果： http://www.shengbin.me 强调 单个*或_产生斜体，两个（**、__）则产生粗体。例如： *斜体* _斜体_ **粗体** **粗体** ***又粗又斜*** ___又粗又斜___ 效果： 斜体 斜体 粗体 粗体 又粗又斜 又粗又斜 内嵌代码 内嵌代码 `天地玄黄` 效果： 内嵌代码 天地玄黄 图片 语法和链接相似，只是前面多个“!” ![替代文字](图片url &quot;图片说明&quot;) 转义字符 如果需要使用以上标记字符而不被Markdown理解为格式标记，需要用\转义：例如\\，效果为\。</summary></entry></feed>
+&lt;p&gt;其中android:pivotX=”50%” 和android:pivotY=”50%” 图片为中心旋转，ab为旋转的图片。&lt;/p&gt;</content><author><name></name></author><category term="安卓" /><summary type="html">列表下拉，页面等待加载都可以使用。    在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下： &amp;lt;animated-rotate xmlns:android=”http://schemas.android.com/apk/res/android”         android:drawable=”@drawable/ab”         android:pivotX=”50%”         android:pivotY=”50%” /&amp;gt; 在layout布局文件里写入：     &amp;lt;ProgressBar         android:layout_width=”wrap_content”         android:layout_height=”wrap_content”         android:indeterminateBehavior=”repeat”         android:indeterminateDuration=”100”         android:layout_centerInParent=”true”         android:indeterminateDrawable=”@drawable/progress”         android:indeterminateOnly=”true” /&amp;gt; 其中android:pivotX=”50%” 和android:pivotY=”50%” 图片为中心旋转，ab为旋转的图片。</summary></entry></feed>

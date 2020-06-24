@@ -10,12 +10,13 @@
   </header>
 
   <div class="navlist">
+    
     <nav>
       {% for nav in site.navigation %}
       {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-      <a href="{{ nav.url }}">{{ nav.name }}</a>
+      <li class="navlist-ul-li"><a href="{{ nav.url }}" class="navlist-href">{{ nav.name }}</a></li>
       {% else %}
-      <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a>
+      <li class="navlist-ul-li"><a href="{{ site.baseurl }}{{ nav.url }}" class="navlist-href">{{ nav.name }}</a></li>
       {% endif %}
       {% endfor %}
     </nav>
