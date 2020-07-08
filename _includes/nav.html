@@ -14,9 +14,10 @@
     <nav>
       {% for nav in site.navigation %}
       {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-      <li class="navlist-ul-li"><a href="{{ nav.url }}" class="navlist-href">{{ nav.name }}</a></li>
+      <!-- <li class="navlist-ul-li"></li> -->
+      </li><a href="{{ nav.url }}" class="navlist-href">{{ nav.name }}</a>
       {% else %}
-      <li class="navlist-ul-li"><a href="{{ site.baseurl }}{{ nav.url }}" class="navlist-href">{{ nav.name }}</a></li>
+      <a href="{{ site.baseurl }}{{ nav.url }}" class="navlist-href">{{ nav.name }}</a>
       {% endif %}
       {% endfor %}
     </nav>
