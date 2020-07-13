@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>归档 – Blog – 石强的博客</title>
+  <title>android:excludeFromRecents属性 – Blog – 石强的博客</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,80 +9,40 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="
+    <meta name="description" content="在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置  属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。
 
+android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。由此该 Activity 启动的后续同属一个 “Task” 的一系列 Activity 都不会出现在 Recent screens。也就是说该属性是对 Task 起作用的，而不仅仅是某个 Activity。
 
-  
-    
-      2020
-    
+所以想要后续的 Activity 能够出现在 Recent screens 中，就必须让后续 Activity 在新的 Task 中。
 
-    
-      
-      
-      
-        android:excludeFromRecents属性
-      
-      2020-07-09
-    
-  
-    
-      
-      
-      
-    
+但是如果设置上面属性的 Activity 正是当前正在使用的，切换到 Recent screens 也是可以看到的。但是退到后台运行后，比如按下 Home 键，属性就会发生作用。
 
-    
-      
-      
-      
-        安卓加载旋转效果
-      
-      2020-06-24
-    
-  
+官方文档如下：
 
+是否应将该 Activity 启动的任务排除在最近使用的应用列表（即概览屏幕）之外。 也就是说，当该 Activity 是新任务的根 Activity 时，此属性确定任务是否应出现在最近使用的应用列表中。 如果应将任务排除在列表之外，请设置“true”；如果应将其包括在内，则设置“false”。 默认值为“false”。
+
+所以要想属性生效设置该属性的 Activity 必须是 Task 的根 Activity。如果在某个 Task 非根 Activity 中设置 android:excludeFromRecents 是没有任何效果的。
 " />
-    <meta property="og:description" content="
+    <meta property="og:description" content="在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置  属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。
 
+android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。由此该 Activity 启动的后续同属一个 “Task” 的一系列 Activity 都不会出现在 Recent screens。也就是说该属性是对 Task 起作用的，而不仅仅是某个 Activity。
 
-  
-    
-      2020
-    
+所以想要后续的 Activity 能够出现在 Recent screens 中，就必须让后续 Activity 在新的 Task 中。
 
-    
-      
-      
-      
-        android:excludeFromRecents属性
-      
-      2020-07-09
-    
-  
-    
-      
-      
-      
-    
+但是如果设置上面属性的 Activity 正是当前正在使用的，切换到 Recent screens 也是可以看到的。但是退到后台运行后，比如按下 Home 键，属性就会发生作用。
 
-    
-      
-      
-      
-        安卓加载旋转效果
-      
-      2020-06-24
-    
-  
+官方文档如下：
 
+是否应将该 Activity 启动的任务排除在最近使用的应用列表（即概览屏幕）之外。 也就是说，当该 Activity 是新任务的根 Activity 时，此属性确定任务是否应出现在最近使用的应用列表中。 如果应将任务排除在列表之外，请设置“true”；如果应将其包括在内，则设置“false”。 默认值为“false”。
+
+所以要想属性生效设置该属性的 Activity 必须是 Task 的根 Activity。如果在某个 Task 非根 Activity 中设置 android:excludeFromRecents 是没有任何效果的。
 " />
     
     <meta name="author" content="Blog" />
 
     
-    <meta property="og:title" content="归档" />
-    <meta property="twitter:title" content="归档" />
+    <meta property="og:title" content="android:excludeFromRecents属性" />
+    <meta property="twitter:title" content="android:excludeFromRecents属性" />
     
   <!-- Async font loading -->
 <script>
@@ -227,48 +187,96 @@
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        <article class="page">
+        <article class="posts">
+  <h1>android:excludeFromRecents属性</h1>
 
-  <h1>归档</h1>
+  <div clsss="meta">
+    <span class="author">
+      
+    </span>
+
+    <span class="date">
+      2020-07-09
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/panlongshouhu.github.io/tags#安卓">
+          安卓
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
   <div class="entry">
-    
+    <p>在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置 <activity> 属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。</activity></p>
 
-<ul class="archive">
-  
-    
-      <h2>2020</h2>
-    
+<p>android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。由此该 Activity 启动的后续同属一个 “Task” 的一系列 Activity 都不会出现在 Recent screens。也就是说该属性是对 Task 起作用的，而不仅仅是某个 Activity。</p>
 
-    <li>
-      
-      <a href="/panlongshouhu.github.io/android-excludeFromRecents/">
-      
-        android:excludeFromRecents属性
-      </a>
-      <time>2020-07-09</time>
-    </li>
-  
-    
-      
-      
-      
-    
+<p>所以想要后续的 Activity 能够出现在 Recent screens 中，就必须让后续 Activity 在新的 Task 中。</p>
 
-    <li>
-      
-      <a href="/panlongshouhu.github.io/android-rotate/">
-      
-        安卓加载旋转效果
-      </a>
-      <time>2020-06-24</time>
-    </li>
-  
-</ul>
+<p>但是如果设置上面属性的 Activity 正是当前正在使用的，切换到 Recent screens 也是可以看到的。但是退到后台运行后，比如按下 Home 键，属性就会发生作用。</p>
+
+<p>官方文档如下：</p>
+
+<p>是否应将该 Activity 启动的任务排除在最近使用的应用列表（即概览屏幕）之外。 也就是说，当该 Activity 是新任务的根 Activity 时，此属性确定任务是否应出现在最近使用的应用列表中。 如果应将任务排除在列表之外，请设置“true”；如果应将其包括在内，则设置“false”。 默认值为“false”。</p>
+
+<p>所以要想属性生效设置该属性的 Activity 必须是 Task 的根 Activity。如果在某个 Task 非根 Activity 中设置 android:excludeFromRecents 是没有任何效果的。</p>
 
   </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'loffer';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "973827534b977f148836",
+          clientSecret: "75caeeb89ba3f2f9821b90560e451d00712c4a76",
+          repo: "panlongshouhu.github.io",
+          owner: "panlongshouhu",
+          admin: ["panlongshouhu"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "android:excludeFromRecents属性",
+          language: "zh-CN",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
 </article>
 
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/panlongshouhu.github.io/android-rotate/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+</div>
       </div>
     </div>
 
