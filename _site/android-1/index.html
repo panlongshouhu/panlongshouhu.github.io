@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Blog – 石强的博客</title>
+  <title>字节、字、bit、byte的关系 – Blog – 石强的博客</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,50 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="
-
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  
-    
-    
-      
-        字节、字、bit、byte的关系
-      
-
-      
-        
-        
-          
-        
-            
-        
-          2020-07-31
-        
-
-        
-          
-          
-            
-              java
-            
-          
-          
-        
-      
-
-      
-        字 word
+    <meta name="description" content="字 word
 字节 byte
 位 bit，来自英文bit，音译为“比特”，表示二进制位。
 字长是指字的长度
@@ -63,187 +20,51 @@
 一个字的字长为16
 一个字节的字长是8
 
-bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为...
-      
+bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为单位。如56Kbps、100.0Mbps 等等。
+Bps即是Byte per second 的简称。而电脑一般都以Bps 显示速度，如1Mbps 大约等同 128 KBps。
+bit 电脑记忆体中最小的单位，在二进位电脑系统中，每一bit 可以代表0 或 1 的数位讯号。
+Byte一个Byte由8 bits 所组成，可代表一个字元(A~Z)、数字(0~9)、或符号(,.?!%&amp;+-*/)，是记忆体储存资料的基本单位，至於每个中文字则须要两Bytes。当记忆体容量过大时，位元组这个单位就不够用，因此就有千位元组的单位KB出现，以下乃个记忆体计算单位之间的相关性：
 
-      更多
-    
-    
-  
-    
-    
-      
-        Android高级工程师面试题
-      
+1 Byte = 8 Bits
 
-      
-        
-        
-          
-        
-            
-        
-          2020-07-25
-        
+1 KB = 1024 Bytes
 
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
+1 MB = 1024 KB
 
-      
-        主要分为以下几部分：
+1 GB = 1024 MB
 
-（1）java面试题
+usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。
 
-（2）Android面试题
+这要从bit和byte说起：bit和byte同译为”比特”，都是数据量度单位，bit=“比特”或“位”。
+byte=字节即1byte=8bits,两者换算是1：8的关系。
+mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。
+mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。
 
-（3）高级开发技术面试题
+我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。
+1 kb = 1024 bytes =2^10 bytes
+1 mb = 1024 kb = 2^20 bytes
+1 gb = 1024 mb = 2^30 bytes
 
-（4）跨平台Hybrid 开发
+比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte。
+也就是说与传输速度有关的b一般指的是bit。
+与容量有关的b一般指的是byte。
 
-一、java面试题
+最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。
 
-熟练掌握java是很关键的，大公司不仅仅要求你会使用几个api，更多的是要你熟悉源码实现原理，甚至要你知道有哪些不足，怎么改进，还有一些jav...
-      
+扩展阅读
+字节的来由
+最开始计算机只是处理数据运算，也就是0-9，加上运算符号，4bit足够了。举个例子(实际不是这样):用0000表示0，0001表示1，0010表示2，依次类推。 
+后来加入了字母，程序符号等，8bit也足够了，而这时诞生了ASCII编码的标准，大家就说把8bit表示出来的值叫做字节(byte)吧，于是就有了字节这个单位。 
+所以1byte等于8bit是计算机发展中的一个约定出来的规则。
 
-      更多
-    
-    
-  
-    
-    
-      
-        android:excludeFromRecents属性
-      
+汉字：
+1 汉字 = 2 byte = 16 bit （这里不是很准确，当编码不同的时候，1个汉字所占的字节数也会有所不同，有些编码是占 2个字节，有些则不是，可能是 3个或者 4个）
 
-      
-        
-        
-          
-        
-            
-        
-          2020-07-09
-        
+Java的八大基本数据类型
 
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
-
-      
-        在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置  属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。
-
-android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。...
-      
-
-      更多
-    
-    
-  
-    
-    
-      
-        安卓加载旋转效果
-      
-
-      
-        
-        
-          
-        
-            
-        
-          2020-06-24
-        
-
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
-
-      
-        列表下拉，页面等待加载都可以使用。
-在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:
-
-&lt;?xml version=”1.0” encoding=”utf-8”?&gt;
-&lt;animated-rotate xmlns:android=”http://schemas.android.c...
-      
-
-      更多
-    
-    
-  
-
-
-
-  
-  
 
 " />
-    <meta property="og:description" content="
-
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  
-    
-    
-      
-        字节、字、bit、byte的关系
-      
-
-      
-        
-        
-          
-        
-            
-        
-          2020-07-31
-        
-
-        
-          
-          
-            
-              java
-            
-          
-          
-        
-      
-
-      
-        字 word
+    <meta property="og:description" content="字 word
 字节 byte
 位 bit，来自英文bit，音译为“比特”，表示二进制位。
 字长是指字的长度
@@ -254,146 +75,56 @@ android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。..
 一个字的字长为16
 一个字节的字长是8
 
-bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为...
-      
+bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为单位。如56Kbps、100.0Mbps 等等。
+Bps即是Byte per second 的简称。而电脑一般都以Bps 显示速度，如1Mbps 大约等同 128 KBps。
+bit 电脑记忆体中最小的单位，在二进位电脑系统中，每一bit 可以代表0 或 1 的数位讯号。
+Byte一个Byte由8 bits 所组成，可代表一个字元(A~Z)、数字(0~9)、或符号(,.?!%&amp;+-*/)，是记忆体储存资料的基本单位，至於每个中文字则须要两Bytes。当记忆体容量过大时，位元组这个单位就不够用，因此就有千位元组的单位KB出现，以下乃个记忆体计算单位之间的相关性：
 
-      更多
-    
-    
-  
-    
-    
-      
-        Android高级工程师面试题
-      
+1 Byte = 8 Bits
 
-      
-        
-        
-          
-        
-            
-        
-          2020-07-25
-        
+1 KB = 1024 Bytes
 
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
+1 MB = 1024 KB
 
-      
-        主要分为以下几部分：
+1 GB = 1024 MB
 
-（1）java面试题
+usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。
 
-（2）Android面试题
+这要从bit和byte说起：bit和byte同译为”比特”，都是数据量度单位，bit=“比特”或“位”。
+byte=字节即1byte=8bits,两者换算是1：8的关系。
+mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。
+mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。
 
-（3）高级开发技术面试题
+我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。
+1 kb = 1024 bytes =2^10 bytes
+1 mb = 1024 kb = 2^20 bytes
+1 gb = 1024 mb = 2^30 bytes
 
-（4）跨平台Hybrid 开发
+比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte。
+也就是说与传输速度有关的b一般指的是bit。
+与容量有关的b一般指的是byte。
 
-一、java面试题
+最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。
 
-熟练掌握java是很关键的，大公司不仅仅要求你会使用几个api，更多的是要你熟悉源码实现原理，甚至要你知道有哪些不足，怎么改进，还有一些jav...
-      
+扩展阅读
+字节的来由
+最开始计算机只是处理数据运算，也就是0-9，加上运算符号，4bit足够了。举个例子(实际不是这样):用0000表示0，0001表示1，0010表示2，依次类推。 
+后来加入了字母，程序符号等，8bit也足够了，而这时诞生了ASCII编码的标准，大家就说把8bit表示出来的值叫做字节(byte)吧，于是就有了字节这个单位。 
+所以1byte等于8bit是计算机发展中的一个约定出来的规则。
 
-      更多
-    
-    
-  
-    
-    
-      
-        android:excludeFromRecents属性
-      
+汉字：
+1 汉字 = 2 byte = 16 bit （这里不是很准确，当编码不同的时候，1个汉字所占的字节数也会有所不同，有些编码是占 2个字节，有些则不是，可能是 3个或者 4个）
 
-      
-        
-        
-          
-        
-            
-        
-          2020-07-09
-        
+Java的八大基本数据类型
 
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
-
-      
-        在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置  属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。
-
-android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。...
-      
-
-      更多
-    
-    
-  
-    
-    
-      
-        安卓加载旋转效果
-      
-
-      
-        
-        
-          
-        
-            
-        
-          2020-06-24
-        
-
-        
-          
-          
-            
-              安卓
-            
-          
-          
-        
-      
-
-      
-        列表下拉，页面等待加载都可以使用。
-在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:
-
-&lt;?xml version=”1.0” encoding=”utf-8”?&gt;
-&lt;animated-rotate xmlns:android=”http://schemas.android.c...
-      
-
-      更多
-    
-    
-  
-
-
-
-  
-  
 
 " />
     
     <meta name="author" content="Blog" />
 
+    
+    <meta property="og:title" content="字节、字、bit、byte的关系" />
+    <meta property="twitter:title" content="字节、字、bit、byte的关系" />
     
   <!-- Async font loading -->
 <script>
@@ -538,50 +269,31 @@ android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。..
 
     <div id="main" role="main" class="wrapper-content">
       <div class="container">
-        
+        <article class="posts">
+  <h1>字节、字、bit、byte的关系</h1>
 
-<div class="posts">
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-  
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/panlongshouhu.github.io/android-1/">字节、字、bit、byte的关系</a>
-      </h1>
+  <div clsss="meta">
+    <span class="author">
+      
+    </span>
 
-      <div clsss="meta">
-        
-        <span class="author">
-          
-        </span>
-            
-        <span class="date">
-          2020-07-31
-        </span>
+    <span class="date">
+      2020-07-31
+    </span>
 
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/panlongshouhu.github.io/tags#java">
-              java
-            </a>
-          </li>
-          
-        </ul>
-      </div>
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/panlongshouhu.github.io/tags#java">
+          java
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 
-      <div class="entry">
-        <p>字 word
+  <div class="entry">
+    <p>字 word
 字节 byte
 位 bit，来自英文bit，音译为“比特”，表示二进制位。
 字长是指字的长度</p>
@@ -592,143 +304,102 @@ android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。..
 <p>一个字的字长为16
 一个字节的字长是8</p>
 
-<p>bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为...
-      </div>
+<p>bps 是 bits per second 的简称。一般数据机及网络通讯的传输速率都是以「bps」为单位。如56Kbps、100.0Mbps 等等。
+Bps即是Byte per second 的简称。而电脑一般都以Bps 显示速度，如1Mbps 大约等同 128 KBps。
+bit 电脑记忆体中最小的单位，在二进位电脑系统中，每一bit 可以代表0 或 1 的数位讯号。
+Byte一个Byte由8 bits 所组成，可代表一个字元(A~Z)、数字(0~9)、或符号(,.?!%&amp;+-*/)，是记忆体储存资料的基本单位，至於每个中文字则须要两Bytes。当记忆体容量过大时，位元组这个单位就不够用，因此就有千位元组的单位KB出现，以下乃个记忆体计算单位之间的相关性：</p>
 
-      <a href="/panlongshouhu.github.io/android-1/" class="read-more">更多</a>
-    </article>
-    
+<p>1 Byte = 8 Bits</p>
+
+<p>1 KB = 1024 Bytes</p>
+
+<p>1 MB = 1024 KB</p>
+
+<p>1 GB = 1024 MB</p>
+
+<p>usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。</p>
+
+<p>这要从bit和byte说起：bit和byte同译为”比特”，都是数据量度单位，bit=“比特”或“位”。
+byte=字节即1byte=8bits,两者换算是1：8的关系。
+mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。
+mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。</p>
+
+<p>我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。
+1 kb = 1024 bytes =2^10 bytes
+1 mb = 1024 kb = 2^20 bytes
+1 gb = 1024 mb = 2^30 bytes</p>
+
+<p>比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte。
+也就是说与传输速度有关的b一般指的是bit。
+与容量有关的b一般指的是byte。</p>
+
+<p>最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。</p>
+
+<p>扩展阅读
+字节的来由
+最开始计算机只是处理数据运算，也就是0-9，加上运算符号，4bit足够了。举个例子(实际不是这样):用0000表示0，0001表示1，0010表示2，依次类推。 
+后来加入了字母，程序符号等，8bit也足够了，而这时诞生了ASCII编码的标准，大家就说把8bit表示出来的值叫做字节(byte)吧，于是就有了字节这个单位。 
+所以1byte等于8bit是计算机发展中的一个约定出来的规则。</p>
+
+<p>汉字：
+1 汉字 = 2 byte = 16 bit （这里不是很准确，当编码不同的时候，1个汉字所占的字节数也会有所不同，有些编码是占 2个字节，有些则不是，可能是 3个或者 4个）</p>
+
+<p>Java的八大基本数据类型</p>
+
+<p><img src="https://panlongshouhu.github.io/images/1.png" alt="avatar" /></p>
+
+  </div>
+
   
-    
-    <article class="post">
-      <h1>
-        <a href="/panlongshouhu.github.io/android-%E9%9D%A2%E8%AF%95%E9%A2%98/">Android高级工程师面试题</a>
-      </h1>
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
 
-      <div clsss="meta">
-        
-        <span class="author">
-          
-        </span>
-            
-        <span class="date">
-          2020-07-25
-        </span>
+	    var disqus_shortname = 'loffer';
 
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/panlongshouhu.github.io/tags#安卓">
-              安卓
-            </a>
-          </li>
-          
-        </ul>
-      </div>
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
 
-      <div class="entry">
-        <p>主要分为以下几部分：</p>
-
-<p>（1）java面试题</p>
-
-<p>（2）Android面试题</p>
-
-<p>（3）高级开发技术面试题</p>
-
-<p>（4）跨平台Hybrid 开发</p>
-
-<p>一、java面试题</p>
-
-<p>熟练掌握java是很关键的，大公司不仅仅要求你会使用几个api，更多的是要你熟悉源码实现原理，甚至要你知道有哪些不足，怎么改进，还有一些jav...
-      </div>
-
-      <a href="/panlongshouhu.github.io/android-%E9%9D%A2%E8%AF%95%E9%A2%98/" class="read-more">更多</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/panlongshouhu.github.io/android-excludeFromRecents/">android:excludeFromRecents属性</a>
-      </h1>
-
-      <div clsss="meta">
-        
-        <span class="author">
-          
-        </span>
-            
-        <span class="date">
-          2020-07-09
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/panlongshouhu.github.io/tags#安卓">
-              安卓
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>在 Android 系统中，如果我们不想某个 Activity 出现在 “Recent screens” 中，可以设置 <activity> 属性 android:excludeFromRecents 为 true。其中有些需要注意到的地方说明下。</activity></p>
-
-<p>android:excludeFromRecents 属性并不会仅仅影响被设置的 Activity。...
-      </div>
-
-      <a href="/panlongshouhu.github.io/android-excludeFromRecents/" class="read-more">更多</a>
-    </article>
-    
-  
-    
-    <article class="post">
-      <h1>
-        <a href="/panlongshouhu.github.io/android-rotate/">安卓加载旋转效果</a>
-      </h1>
-
-      <div clsss="meta">
-        
-        <span class="author">
-          
-        </span>
-            
-        <span class="date">
-          2020-06-24
-        </span>
-
-        <ul class="tag">
-          
-          <li>
-            <a href="http://localhost:4000/panlongshouhu.github.io/tags#安卓">
-              安卓
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="entry">
-        <p>列表下拉，页面等待加载都可以使用。<br />
-在res下创建drawable文件夹，在drawable下创建progress.xml文件，代码如下:</p>
-
-<p>&lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br />
-&lt;animated-rotate xmlns:android=”http://schemas.android.c...
-      </div>
-
-      <a href="/panlongshouhu.github.io/android-rotate/" class="read-more">更多</a>
-    </article>
-    
-  
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+
+  
+<div class="comments">
+    <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: "973827534b977f148836",
+          clientSecret: "75caeeb89ba3f2f9821b90560e451d00712c4a76",
+          repo: "panlongshouhu.github.io",
+          owner: "panlongshouhu",
+          admin: ["panlongshouhu"],
+          id: window.location.pathname,      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false,  // Facebook-like distraction free mode
+          title: "字节、字、bit、byte的关系",
+          language: "zh-CN",
+
+        })
+        
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+</article>
 
 <div class="pagination">
   
+    <span class="prev" >
+      <a href="http://localhost:4000/panlongshouhu.github.io/android-%E9%9D%A2%E8%AF%95%E9%A2%98/">
+        ← 上一篇
+      </a>
+    </span>
+  
   
 </div>
-
       </div>
     </div>
 
